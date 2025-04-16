@@ -35,7 +35,7 @@ void main()
 #endif  MASSIV_3
 
 #ifdef MASSIV_4
-	int S = 0;
+	double S = 0;
 	for (int i = 0; i < M; i++) S += arr[i];cout << S/M;
 	
 #endif  MASSIV_4

@@ -2,7 +2,7 @@
 using namespace std;
 
 //#define MASSIV_1
-#define MASSIV_2
+//#define MASSIV_2
 //#define MASSIV_3
 //#define MASSIV_4
 //#define MASSIV_5
@@ -12,10 +12,10 @@ void main()
 	setlocale(LC_ALL, " ");
 	const int M = 3;
 	int arr[M];
-	cout << "Заполните элементы массива: " << endl;
+	/*cout << "Заполните элементы массива: " << endl;
 	cout << "m1: ";cin >> arr[0];
 	cout << "m2: ";cin >> arr[1];
-	cout << "m3: ";cin >> arr[2];
+	cout << "m3: ";cin >> arr[2];*/
 
 #ifdef MASSIV_1	
 	for (int i = 0; i < M; i++)cout << arr[i] << endl;
@@ -41,13 +41,27 @@ void main()
 #endif  MASSIV_4
 
 #ifdef MASSIV_5 //не решила
-	int N = 0;
+	int min, max;
+	min = max = arr[0];
+
 	for (int i = 0; i < M; i++)
 	{
-		cout << arr[i] << endl;
+		if (arr[i] < min)min = arr[i];
+		if (arr[i] > max)max = arr[i];
+
 		
 	}
+	cout << "min: "<< min << endl;
+	cout << "max: "<< max << endl;
+		
 		
 #endif  MASSIV_5
+
+	for (int i = 0; i < M;i++)
+	{
+		arr[i] = rand() % (100 - 50) + 50;
+	}
+
+	for (int i = 0; i < M; i++)cout << arr[i] << endl;
 
 }

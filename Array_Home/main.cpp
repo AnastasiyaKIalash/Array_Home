@@ -5,7 +5,9 @@ using namespace std;
 //#define MASSIV_2
 //#define MASSIV_3
 //#define MASSIV_4
-//#define MASSIV_5
+#define MASSIV_5
+//#define MASSIV_6
+
 
 void main()
 {
@@ -40,28 +42,31 @@ void main()
 	
 #endif  MASSIV_4
 
-#ifdef MASSIV_5 //не решила
+#ifdef MASSIV_5 
 	int min, max;
 	min = max = arr[0];
 
 	for (int i = 0; i < M; i++)
 	{
 		if (arr[i] < min)min = arr[i];
-		if (arr[i] > max)max = arr[i];
-
-		
+		if (arr[i] > max)max = arr[i];	
 	}
 	cout << "min: "<< min << endl;
 	cout << "max: "<< max << endl;
-		
+	
 		
 #endif  MASSIV_5
 
+#ifdef MASSIV_6
 	for (int i = 0; i < M;i++)
 	{
 		arr[i] = rand() % (100 - 50) + 50;
+		cout << arr[i] << endl;
 	}
 
-	for (int i = 0; i < M; i++)cout << arr[i] << endl;
+	//for (int i = 0; i < M; i++)cout << arr[i] << endl;
+#endif  MASSIV_6
+
+
 
 }
